@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}signup page{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+
+<body>
+    
+    <div class="logpad">
+        <div class="logo">
+            <img src="https://images.pexels.com/photos/1214205/pexels-photo-1214205.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                height="100" width="100">
+        </div>
+        {% block content %}
+        <div>
+            <span>Signup</span>
+        </div>
+        <div class="logbox">
+            <form action="" method="post">
+                {% csrf_token %}
+                <label>Username</label>
+                <input type="text" name="name">
+                <label>Mobile no</label>
+                <input type="text" name="mobile">
+                <label>Email</label>
+                <input type="email" name="email">
+                <label>Password</label>
+                <input type="password" name="password">
+                <!-- <input type="submit" value="Signup"> -->
+                <button type="submit">Signup</button>
+
+            </form>
+            <h4>Allready registered?....<a href="{% url 'signin' %}" style="color:white;">Signin</a>....here</h4>
+            {% if messages %}
+            {% for m in messages %}
+            {{m}}
+            {% endfor %}
+            {% endif %}
+
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+
+</html>

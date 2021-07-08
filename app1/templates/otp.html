@@ -1,0 +1,15 @@
+{% extends 'signup.html' %}
+{% block title %}otp page{% endblock title %}
+{% block content %}
+<h1 style="color:white;text-align: center;">Enter otp send to you mobile no</h1>
+
+<div class="logbox">
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="sentmobileotp">otp</label>
+<input type="text" name="sentmobileotp" placeholder="enter otp here">
+    <button type="submit">varify</button>
+    </form>
+    </div>
+
+{% endblock content %}

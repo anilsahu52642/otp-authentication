@@ -1,0 +1,80 @@
+body{
+    background: url(https://images.pexels.com/photos/1428277/pexels-photo-1428277.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+.logpad{
+    max-width: 340px;
+    background: linear-gradient(180deg,#181818,#181818,rgba(81,81,81,.7));
+    margin: auto;
+    padding: 50px;
+    margin-top: 90px;
+    text-align: center;
+    border-radius: 3px 25px;
+}
+.logpad span:first-child{
+    font-family: Valeyola;
+    color: #ebca71;
+    font-size: 44px;
+}
+.logpad span:last-child{
+    font-family: Gabriola;
+    color: #fde7ab;
+    font-size: 44px;
+}
+.logpad input{
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 2px solid #fde7ab;
+    width: 100%;
+    padding: 10px 0;
+    color: #fde7ab;
+    font-family: "Century Gothic";
+    font-size: 18px;
+    margin-bottom: 20px;
+    transition: .5s;
+}
+.logbox{
+    color: #fde7ab;
+    font-family: "Century Gothic";
+    text-align: left;
+}
+.logo img{
+    margin-top: -110px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid  rgb(24,24,24);
+}
+.logpad button{
+    color: #181818;
+    background-color: #ebca71;
+    font-size: 21px;
+    font-family: Lithos Pro;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    margin: 20px 0;
+    transition: .3s;
+    border-radius: 3px 20px;
+}
+.logpad button:hover{
+    background-color: #fde7ab;
+
+}
+.logpad input:focus{
+    background: none;
+    border-bottom: 2px solid #fff;
+}
+@media(max-width: 720px){
+    .logpad{
+        max-width: 240px;
+    }
+    body{
+        background-size: 300% 200%;
+        background-position: center;
+    }
+}

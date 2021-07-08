@@ -1,0 +1,31 @@
+{% extends 'signup.html' %}
+{% block title %}signin page{% endblock title %}
+{% block content %}
+<div>
+    <span>Signin</span>
+</div>
+<div class="logbox">
+    <form action="" method="post">
+        {% csrf_token %}
+        <label>Username</label>
+        <input type="text" name="name">
+        <label>Password</label>
+        <input type="password" name="password">
+        <!-- <input type="submit" value="Signup"> -->
+        <button type="submit">Signin</button>
+
+    </form>
+    <h4>New member?.....<a href="{% url 'signup' %}" style="color:white;">Signup</a>....here</h4>
+
+    {% if messages %}
+    {% for m in messages %}
+    {{m}}
+    {% endfor %}
+    {% endif %}
+
+</div>
+</div>
+
+
+
+{% endblock content %}
